@@ -5,25 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>US Stock Research</title>
 <style>
-  :root { --bg:#f7f7f5; --panel:#fff; --text:#1c1c1a; --muted:#6b6b66; --line:#e2e2dc;
-          --accent:#2457d6; --good:#1f7a3f; --bad:#b3261e; --code:#f0f0ec; }
+  :root { --bg:linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f766e 100%); --panel:#ffffff; --text:#0f172a; --muted:#64748b; --line:#e2e8f0;
+          --accent:linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%); --good:#10b981; --bad:#ef4444; --code:#f8fafc; }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#141414; --panel:#1d1d1c; --text:#ececea; --muted:#9a9a94; --line:#33332f;
-            --accent:#7aa2ff; --good:#5cc983; --bad:#ff7b72; --code:#262624; }
+    :root { --bg:linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0d9488 100%); --panel:#1e293b; --text:#f1f5f9; --muted:#94a3b8; --line:#334155;
+            --accent:linear-gradient(135deg, #60a5fa 0%, #22d3ee 100%); --good:#34d399; --bad:#f87171; --code:#0f172a; }
   }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 system-ui, sans-serif; }
+  body { margin:0; background:var(--bg); background-attachment:fixed; color:var(--text); font:15px/1.5 system-ui, sans-serif; }
   main { max-width:960px; margin:0 auto; padding:24px 16px 64px; }
-  h1 { font-size:22px; margin:0 0 4px; }
+  h1 { font-size:28px; margin:0 0 8px; font-weight:800; background:linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+       -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
   .sub { color:var(--muted); margin:0 0 20px; font-size:13px; }
-  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px; margin-bottom:16px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:24px; margin-bottom:20px;
+           box-shadow:0 2px 8px rgba(0,0,0,0.08); }
   label { display:block; font-size:12px; color:var(--muted); margin:10px 0 4px; }
   input, textarea { width:100%; padding:8px 10px; border:1px solid var(--line); border-radius:6px;
                     background:var(--bg); color:var(--text); font:inherit; }
   textarea { min-height:60px; resize:vertical; }
   .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(140px, 1fr)); gap:0 12px; }
-  button { margin-top:14px; padding:9px 18px; border:0; border-radius:6px; background:var(--accent);
-           color:#fff; font:inherit; font-weight:600; cursor:pointer; }
+  button { margin-top:14px; padding:12px 24px; border:0; border-radius:8px; background:var(--accent);
+           color:#fff; font:inherit; font-weight:700; cursor:pointer; transition:transform 0.2s, box-shadow 0.2s;
+           box-shadow:0 4px 15px rgba(59, 130, 246, 0.4); }
+  button:hover:not(:disabled) { transform:translateY(-2px); box-shadow:0 6px 20px rgba(59, 130, 246, 0.6); }
   button:disabled { opacity:.5; cursor:default; }
   .hint { font-size:12px; color:var(--muted); margin-top:4px; }
   pre { background:var(--code); padding:10px; border-radius:6px; white-space:pre-wrap; word-break:break-word;

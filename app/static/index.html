@@ -51,17 +51,17 @@
 
   <form class="panel" id="form">
     <label for="filters">Finviz filters (the <code>f=</code> value from a finviz.com screener URL)</label>
-    <input id="filters" name="filters">
+    <input id="filters" name="filters" style="background:#fff!important;color:#000!important;">
     <label for="tickers">Or evaluate these tickers instead (comma-separated; skips the screen)</label>
-    <input id="tickers" name="tickers" placeholder="e.g. MSFT, NVDA, COST">
+    <input id="tickers" name="tickers" placeholder="e.g. MSFT, NVDA, COST" style="background:#fff!important;color:#000!important;">
     <label for="userCriteria">Your criteria (free text, optional)</label>
-    <textarea id="userCriteria" name="userCriteria" placeholder="e.g. management must be clean; no heavy insider selling; policy must not be a headwind"></textarea>
+    <textarea id="userCriteria" name="userCriteria" placeholder="e.g. management must be clean; no heavy insider selling; policy must not be a headwind" style="background:#fff!important;color:#000!important;"></textarea>
     <div class="grid">
-      <div><label for="order">Sort (Finviz o=)</label><input id="order" name="order"></div>
-      <div><label for="maxStocksToEvaluate">Max stocks</label><input id="maxStocksToEvaluate" name="maxStocksToEvaluate" type="number" min="1" max="50"></div>
-      <div><label for="horizonYears">Horizon (years)</label><input id="horizonYears" name="horizonYears" type="number" min="1" max="10"></div>
-      <div><label for="minConviction">Min conviction</label><input id="minConviction" name="minConviction" type="number" min="1" max="10"></div>
-      <div><label for="maxDocChars">Max doc chars</label><input id="maxDocChars" name="maxDocChars" type="number" min="2000" step="1000"></div>
+      <div><label for="order">Sort (Finviz o=)</label><input id="order" name="order" style="background:#fff!important;color:#000!important;"></div>
+      <div><label for="maxStocksToEvaluate">Max stocks</label><input id="maxStocksToEvaluate" name="maxStocksToEvaluate" type="number" min="1" max="50" style="background:#fff!important;color:#000!important;"></div>
+      <div><label for="horizonYears">Horizon (years)</label><input id="horizonYears" name="horizonYears" type="number" min="1" max="10" style="background:#fff!important;color:#000!important;"></div>
+      <div><label for="minConviction">Min conviction</label><input id="minConviction" name="minConviction" type="number" min="1" max="10" style="background:#fff!important;color:#000!important;"></div>
+      <div><label for="maxDocChars">Max doc chars</label><input id="maxDocChars" name="maxDocChars" type="number" min="2000" step="1000" style="background:#fff!important;color:#000!important;"></div>
     </div>
     <p class="hint">Each stock costs 4 LLM calls. Stops at the first stock rated INVEST.</p>
     <button id="run" type="submit">Run research</button>
